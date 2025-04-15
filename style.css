@@ -134,3 +134,28 @@ section:hover {
   margin-bottom: 2rem;
   text-shadow: 0 0 10px black;
 }
+/* Tämä takaa responsiivisuuden */
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+@media only screen and (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2.5rem; /* Pienempi fontti pienemmille näytöille */
+  }
+  .cta-button {
+    font-size: 1.2rem; /* Nappi pienenee puhelimella */
+    padding: 0.8rem 1rem; /* Vähän pienempi koko */
+  }
+  section {
+    padding: 1.5rem; /* Pienempi padding mobiilissa */
+  }
+}
+
+/* Suuremmat näytöt kuten tabletit ja pöytäkoneet */
+@media only screen and (min-width: 768px) {
+  .hero-content h1 {
+    font-size: 3.5rem; /* Suurempi fontti suuremmilla näytöillä */
+  }
+}
