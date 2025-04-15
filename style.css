@@ -70,11 +70,34 @@ main {
   padding: 3rem 2rem;
 }
 
+/* Tervetuloa ja hinnasto laatikot vierekkäin */
+.row {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+}
+
 section {
   max-width: 800px;
   margin: 0 auto 3rem auto;
   background-color: #e9f5e9;
   padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.intro {
+  width: 48%;
+}
+
+.hinnasto {
+  width: 48%;
+}
+
+.palvelu {
+  background-color: #e9f5e9;
+  padding: 1.5rem;
   border-radius: 10px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
@@ -98,6 +121,14 @@ footer {
   }
   section {
     padding: 1.5rem;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+
+  .intro, .hinnasto {
+    width: 100%;
   }
 }
 
