@@ -99,3 +99,22 @@ footer {
     max-width: 90%;
   }
 }
+
+/* Sijaintiboksi pysyy paikoillaan */
+.kartta {
+  position: relative;
+  animation: fadeInUp 1s ease-out forwards;
+  opacity: 0; /* Piilotetaan alkuun */
+  transform: translateY(20px); /* Liike alhaalta ylös */
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
