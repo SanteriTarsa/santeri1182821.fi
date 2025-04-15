@@ -70,42 +70,46 @@ main {
   padding: 3rem 2rem;
 }
 
-/* Tervetuloa laatikon liukuminen vasemmalta ja motion blur */
-.intro {
-  width: 40%; /* Kapeampi kuin ennen */
-  opacity: 0; /* Aluksi piilotettu */
+/* Liukuminen ja motion blur */
+.intro, .hinnasto, .yhteystiedot, .maksut {
+  opacity: 0;
   transform: translateX(-100%); /* Alkuperäinen sijainti vasemmalla */
-  transition: transform 1s ease-out, opacity 1s ease-out; /* Animaation pehmeys */
+  transition: transform 1s ease-out, opacity 1s ease-out;
 }
 
-/* Liukuminen vasemmalta */
+.hinnasto {
+  transform: translateX(100%); /* Oikealta liukuminen */
+}
+
+.maksut {
+  transform: translateX(100%); /* Oikealta liukuminen */
+}
+
+.yhteystiedot {
+  transform: translateX(-100%); /* Vasen puoli */
+}
+
 @keyframes slideInLeft {
   0% {
-    transform: translateX(-100%); /* Alkuperäinen sijainti vasemmalla */
+    transform: translateX(-100%);
     opacity: 0;
   }
   100% {
-    transform: translateX(0); /* Pysähtyy paikoilleen */
+    transform: translateX(0);
     opacity: 1;
   }
 }
 
-/* Motion blur efekti */
-@keyframes blurEffect {
+/* Animaatio: liukuu vasemmalta */
+@keyframes slideInRight {
   0% {
-    filter: blur(10px); /* Alussa motion blur */
+    transform: translateX(100%);
+    opacity: 0;
   }
   100% {
-    filter: blur(0); /* Blur poistuu animaation aikana */
+    transform: translateX(0);
+    opacity: 1;
   }
-}
-
-/* Tervetuloa ja hinnasto laatikot vierekkäin */
-.row {
-  display: flex;
-  gap: 20px;
-  justify-content: space-between;
-  margin-bottom: 3rem;
 }
 
 section {
@@ -117,38 +121,38 @@ section {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-.intro {
-  width: 40%; /* Kapeampi kuin ennen */
+section.maksut {
+  animation: slideInRight 1s ease-out forwards;
 }
 
-.hinnasto {
-  width: 40%; /* Kapeampi kuin ennen */
-  opacity: 0; /* Piilotetaan alkuun */
-  transform: translateX(100%); /* Alkuperäinen sijainti oikealla */
-  transition: transform 1s ease-out, opacity 1s ease-out; /* Liukuminen ja näkyvyys */
+section.hinnasto {
+  animation: slideInRight 1s ease-out forwards;
 }
 
-.maksut {
-  width: 40%; /* Kapeampi kuin ennen */
-  opacity: 0; /* Piilotetaan alkuun */
-  transform: translateX(100%); /* Alkuperäinen sijainti oikealla */
-  transition: transform 1s ease-out, opacity 1s ease-out; /* Liukuminen ja näkyvyys */
+section.intro {
+  animation: slideInLeft 1s ease-out forwards;
 }
 
-/* Yhteystiedot ja maksuvälineet vierekkäin */
-.row {
-  display: flex;
-  gap: 20px;
-  justify-content: space-between;
-  margin-bottom: 3rem;
+section.yhteystiedot {
+  animation: slideInLeft 1s ease-out forwards;
 }
 
-.yhteystiedot {
-  width: 40%; /* Kapeampi kuin ennen */
+.kartta {
+  position: relative;
+  animation: fadeInUp 1s ease-out forwards;
+  opacity: 0;
+  transform: translateY(20px);
 }
 
-.maksut {
-  width: 40%; /* Kapeampi kuin ennen */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Responsiivisuus */
@@ -169,26 +173,7 @@ section {
   }
 
   .intro, .hinnasto, .yhteystiedot, .maksut {
-    width: 100%; /* Mobiilissa ne vievät koko leveys */
-  }
-}
-
-/* Sijaintiboksi pysyy paikoillaan */
-.kartta {
-  position: relative;
-  animation: fadeInUp 1s ease-out forwards;
-  opacity: 0; /* Piilotetaan alkuun */
-  transform: translateY(20px); /* Liike alhaalta ylös */
-}
-
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
+    width: 100%;
   }
 }
 
