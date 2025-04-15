@@ -117,3 +117,39 @@ footer {
     max-width: 90%; /* Vähän rajataan leveyttä */
   }
 }
+/* Infopalkkien asettelu */
+section.maksut,
+section.hinnasto {
+  display: flex; /* Käytämme flexboxia */
+  justify-content: space-between; /* Asetetaan palkit erilleen */
+  gap: 20px; /* Lisää pieni väli palkkien väliin */
+  flex-wrap: wrap; /* Sallii palkkien kiertää mobiilissa */
+}
+
+/* Yksittäisten palkkien tyylit */
+section .palvelu {
+  width: 48%; /* Palkkien leveys, 2 palkkia per rivi */
+  background-color: #e9f5e9;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+section .palvelu:hover {
+  transform: scale(1.05); /* Palkki suurenee hoverilla */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Voimakkaampi varjo hover-tilassa */
+}
+
+/* Responsiivisuus pienillä näytöillä */
+@media only screen and (max-width: 768px) {
+  section.maksut,
+  section.hinnasto {
+    flex-direction: column; /* Yksi palkki per rivi mobiilissa */
+  }
+
+  section .palvelu {
+    width: 100%; /* Mobiilissa palkit vievät koko leveys */
+    margin-bottom: 1rem; /* Väli palkkien välille */
+  }
+}
