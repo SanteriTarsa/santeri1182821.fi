@@ -66,14 +66,16 @@ section {
   opacity: 0; /* Aluksi piilotamme ne */
   transform: translateX(-50%); /* Alkuperäinen sijainti vasemmalla */
   transition: all 0.5s ease; /* Pehmeä liike */
+  filter: blur(4px); /* Motion blur */
+  transition: all 0.8s ease, filter 0.8s ease; /* Blur ja liike mukana */
 }
 
 /* Kun infopalkki tulee näkyviin */
 section.in-view {
   opacity: 1; /* Tekee palkit näkyviksi */
   transform: translateX(0); /* Liikuttaa palkin keskelle */
-  filter: blur(4px); /* Motion blur */
-  transition: all 0.8s ease, filter 0.6s ease; /* Lisää liikkeen ja blurin aikaviive */
+  filter: blur(0); /* Poistaa motion blurrin */
+  transition: all 0.8s ease, filter 1s ease; /* Liikuttaa ja kirkastaa palkin */
 }
 
 /* Footer */
