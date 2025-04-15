@@ -102,12 +102,20 @@ section {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Footer */
-footer {
-  text-align: center;
-  background-color: #d8f3dc;
-  padding: 1rem;
-  color: #081c15;
+/* Yhteystiedot ja maksuvälineet vierekkäin */
+.row {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+}
+
+.yhteystiedot {
+  width: 48%;
+}
+
+.maksut {
+  width: 48%;
 }
 
 /* Responsiivisuus */
@@ -127,7 +135,7 @@ footer {
     flex-direction: column;
   }
 
-  .intro, .hinnasto {
+  .intro, .hinnasto, .yhteystiedot, .maksut {
     width: 100%;
   }
 }
@@ -149,4 +157,11 @@ footer {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+footer {
+  text-align: center;
+  background-color: #d8f3dc;
+  padding: 1rem;
+  color: #081c15;
 }
