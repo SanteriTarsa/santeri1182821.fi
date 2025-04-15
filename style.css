@@ -142,6 +142,59 @@ section {
 
 .yhteystiedot {
   width: 40%; /* Kapeampi kuin ennen */
+  opacity: 0;
+  transform: translateX(-100%); /* Aluksi vasemmalla */
+  transition: transform 1s ease-out, opacity 1s ease-out; /* Liukuminen ja näkyvyys */
 }
 
-.maksut
+.maksut {
+  width: 40%; /* Kapeampi kuin ennen */
+}
+
+/* Responsiivisuus */
+@media only screen and (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+  .cta-button {
+    font-size: 1.2rem;
+    padding: 0.8rem 1rem;
+  }
+  section {
+    padding: 1.5rem;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+
+  .intro, .hinnasto, .yhteystiedot, .maksut {
+    width: 100%; /* Mobiilissa ne vievät koko leveys */
+  }
+}
+
+/* Sijaintiboksi pysyy paikoillaan */
+.kartta {
+  position: relative;
+  animation: fadeInUp 1s ease-out forwards;
+  opacity: 0; /* Piilotetaan alkuun */
+  transform: translateY(20px); /* Liike alhaalta ylös */
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+footer {
+  text-align: center;
+  background-color: #d8f3dc;
+  padding: 1rem;
+  color: #081c15;
+}
