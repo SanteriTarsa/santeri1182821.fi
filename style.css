@@ -96,3 +96,41 @@ footer {
   padding: 1rem;
   color: #081c15;
 }
+/* Yleinen boksi tyyli */
+section {
+  max-width: 800px;
+  margin: 0 auto 3rem auto;
+  background-color: #e9f5e9;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Haalea varjo */
+  transition: all 0.3s ease; /* Siirtymä */
+}
+
+/* Boksi suurenee, kun hiiri menee sen päälle */
+section:hover {
+  transform: scale(1.05); /* Laajentaa vähän */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Voimakkaampi varjo hover-tilassa */
+}
+
+/* Tervetuloa-teksti keskelle */
+.intro h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #2d6a4f;
+  margin-bottom: 1.5rem;
+}
+
+/* Teksti keskelle hero-alueella */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: white;
+}
+
+.hero-content h1 {
+  font-size: 4rem;
+  margin-bottom: 2rem;
+  text-shadow: 0 0 10px black;
+}
