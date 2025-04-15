@@ -88,11 +88,11 @@ section {
 }
 
 .intro {
-  width: 48%;
+  width: 40%; /* Kapeampi kuin ennen */
 }
 
 .hinnasto {
-  width: 48%;
+  width: 40%; /* Kapeampi kuin ennen */
 }
 
 .palvelu {
@@ -111,11 +111,11 @@ section {
 }
 
 .yhteystiedot {
-  width: 48%;
+  width: 40%; /* Kapeampi kuin ennen */
 }
 
 .maksut {
-  width: 48%;
+  width: 40%; /* Kapeampi kuin ennen */
 }
 
 /* Responsiivisuus */
@@ -136,7 +136,7 @@ section {
   }
 
   .intro, .hinnasto, .yhteystiedot, .maksut {
-    width: 100%;
+    width: 100%; /* Mobiilissa ne vievät koko leveys */
   }
 }
 
