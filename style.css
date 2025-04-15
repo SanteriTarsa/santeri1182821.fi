@@ -159,31 +159,3 @@ html {
     font-size: 3.5rem; /* Suurempi fontti suuremmilla näytöillä */
   }
 }
-/* Logo positioning */
-.logo {
-  position: absolute;
-  top: 10px; /* Distance from the top of the page */
-  right: 10px; /* Distance from the right of the page */
-  width: 100px; /* Set the size of the logo */
-  height: auto;
-  z-index: 10; /* Ensure it's above other content */
-}
-
-/* Rest of your existing styles */
-/* Logon sijoittaminen oikeaan yläkulmaan */
-.logo {
-  position: absolute;
-  top: 20px; /* Etäisyys sivun yläreunasta */
-  right: 20px; /* Etäisyys sivun oikeasta reunasta */
-  width: 100px; /* Logon koko */
-  height: auto;
-  z-index: 10; /* Varmistaa, että logo näkyy muiden elementtien päällä */
-}/* Logon sijoittaminen oikeaan yläkulmaan */
-.logo {
-  position: absolute;
-  top: 20px; /* Etäisyys sivun yläreunasta */
-  right: 20px; /* Etäisyys sivun oikeasta reunasta */
-  width: 100px; /* Logon koko */
-  height: auto;
-  z-index: 10; /* Varmistaa, että logo näkyy muiden elementtien päällä */
-}
