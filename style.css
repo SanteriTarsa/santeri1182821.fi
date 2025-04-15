@@ -72,7 +72,7 @@ main {
 
 /* Tervetuloa laatikon liukuminen vasemmalta ja motion blur */
 .intro {
-  width: 40%; /* Kapeampi kuin ennen */
+  width: 48%; /* Kapeampi kuin ennen */
   opacity: 0; /* Aluksi piilotettu */
   transform: translateX(-100%); /* Alkuperäinen sijainti vasemmalla */
   transition: transform 1s ease-out, opacity 1s ease-out; /* Animaation pehmeys */
@@ -118,18 +118,18 @@ section {
 }
 
 .intro {
-  width: 40%; /* Kapeampi kuin ennen */
+  width: 48%; /* Kapeampi kuin ennen */
 }
 
 .hinnasto {
-  width: 40%; /* Kapeampi kuin ennen */
+  width: 48%; /* Kapeampi kuin ennen */
   opacity: 0; /* Piilotetaan alkuun */
   transform: translateX(100%); /* Alkuperäinen sijainti oikealla */
   transition: transform 1s ease-out, opacity 1s ease-out; /* Liukuminen ja näkyvyys */
 }
 
 .maksut {
-  width: 40%; /* Kapeampi kuin ennen */
+  width: 48%; /* Kapeampi kuin ennen */
   opacity: 0; /* Piilotetaan alkuun */
   transform: translateX(100%); /* Alkuperäinen sijainti oikealla */
   transition: transform 1s ease-out, opacity 1s ease-out; /* Liukuminen ja näkyvyys */
@@ -144,11 +144,11 @@ section {
 }
 
 .yhteystiedot {
-  width: 40%; /* Kapeampi kuin ennen */
+  width: 48%; /* Kapeampi kuin ennen */
 }
 
 .maksut {
-  width: 40%; /* Kapeampi kuin ennen */
+  width: 48%; /* Kapeampi kuin ennen */
 }
 
 /* Responsiivisuus */
