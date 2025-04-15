@@ -70,6 +70,36 @@ main {
   padding: 3rem 2rem;
 }
 
+/* Tervetuloa laatikon liukuminen vasemmalta ja motion blur */
+.intro {
+  width: 40%; /* Kapeampi kuin ennen */
+  animation: slideInLeft 1s ease-out forwards, blurEffect 1s ease-out forwards; /* Kaksi animaatiota */
+  opacity: 0; /* Aluksi piilotettu */
+  transform: translateX(-100%); /* Alkuperäinen sijainti vasemmalla */
+}
+
+/* Liukuminen vasemmalta */
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-100%); /* Alkuperäinen sijainti vasemmalla */
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0); /* Pysähtyy paikoilleen */
+    opacity: 1;
+  }
+}
+
+/* Motion blur efekti */
+@keyframes blurEffect {
+  0% {
+    filter: blur(10px); /* Alussa motion blur */
+  }
+  100% {
+    filter: blur(0); /* Blur poistuu animaation aikana */
+  }
+}
+
 /* Tervetuloa ja hinnasto laatikot vierekkäin */
 .row {
   display: flex;
