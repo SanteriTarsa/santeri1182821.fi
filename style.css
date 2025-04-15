@@ -78,6 +78,12 @@ section.in-view {
   transition: all 0.8s ease, filter 1s ease; /* Liikuttaa ja kirkastaa palkin */
 }
 
+/* Hover-efekti palkkeihin */
+section:hover {
+  transform: scale(1.05); /* Palkki suurenee hoverilla */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Voimakkaampi varjo hover-tilassa */
+}
+
 /* Footer */
 footer {
   text-align: center;
