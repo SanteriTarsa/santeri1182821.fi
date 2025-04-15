@@ -46,3 +46,15 @@ footer {
   padding: 1rem;
   color: #081c15;
 }
+
+header {
+  background-color: #d8f3dc;
+  color: #081c15;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+header h1,
+header p {
+  text-align: center;
+}
