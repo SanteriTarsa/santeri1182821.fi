@@ -70,35 +70,12 @@ main {
   padding: 3rem 2rem;
 }
 
-.row {
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
-  flex-wrap: wrap; /* Palkit kiertävät jos tilaa ei ole */
-}
-
-section {
-  max-width: 800px;
-  margin: 0 auto 3rem auto;
-  background-color: #e9f5e9;
-  padding: 2rem;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  opacity: 1;
-  transform: translateX(0);
-}
-
 /* Footer */
 footer {
   text-align: center;
   background-color: #d8f3dc;
   padding: 1rem;
   color: #081c15;
-}
-
-/* Sijainti Kartalla - Liikkumaton */
-.kartta {
-  transform: translateY(0); /* Ei liiku */
 }
 
 /* Responsiivisuus */
@@ -121,48 +98,4 @@ footer {
     font-size: 5rem;
     max-width: 90%;
   }
-}
-
-/* Infopalkit */
-section.maksut,
-section.hinnasto,
-section.yhteystiedot {
-  transition: transform 0.7s ease-out;
-}
-
-section.maksut {
-  transform: translateX(-100%);
-}
-
-section.hinnasto {
-  transform: translateX(100%);
-}
-
-section.yhteystiedot {
-  transform: translateX(-100%);
-}
-
-section.in-view.maksut {
-  transform: translateX(0);
-}
-
-section.in-view.hinnasto {
-  transform: translateX(0);
-}
-
-section.in-view.yhteystiedot {
-  transform: translateX(0);
-}
-
-section .palvelu {
-  width: 48%;
-  background-color: #e9f5e9;
-  padding: 1.5rem;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-}
-
-section .palvelu:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
 }
