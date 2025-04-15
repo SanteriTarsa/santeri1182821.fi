@@ -170,3 +170,12 @@ html {
 }
 
 /* Rest of your existing styles */
+/* Logon sijoittaminen oikeaan yläkulmaan */
+.logo {
+  position: absolute;
+  top: 20px; /* Etäisyys sivun yläreunasta */
+  right: 20px; /* Etäisyys sivun oikeasta reunasta */
+  width: 100px; /* Logon koko */
+  height: auto;
+  z-index: 10; /* Varmistaa, että logo näkyy muiden elementtien päällä */
+}
