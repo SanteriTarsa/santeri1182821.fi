@@ -91,7 +91,7 @@ section.in-view {
 /* Footer */
 footer {
   text-align: center;
-  background-color: #d8f3dc;
+  background-color: #d8f3dc; /* Lisätty taustaväri */
   padding: 1rem;
   color: #081c15;
 }
@@ -117,6 +117,7 @@ footer {
     max-width: 90%; /* Vähän rajataan leveyttä */
   }
 }
+
 /* Infopalkkien asettelu */
 section.maksut,
 section.hinnasto {
