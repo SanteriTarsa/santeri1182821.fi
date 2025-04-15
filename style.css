@@ -96,6 +96,11 @@ footer {
   color: #081c15;
 }
 
+/* Sijainti Kartalla - Liikkumaton */
+.kartta {
+  transform: translateY(0); /* Ei liiku */
+}
+
 /* Responsiivisuus */
 @media only screen and (max-width: 768px) {
   .hero-content h1 {
@@ -121,8 +126,7 @@ footer {
 /* Infopalkit */
 section.maksut,
 section.hinnasto,
-section.yhteystiedot,
-section.kartta {
+section.yhteystiedot {
   transition: transform 0.7s ease-out;
 }
 
@@ -138,10 +142,6 @@ section.yhteystiedot {
   transform: translateX(-100%);
 }
 
-section.kartta {
-  transform: translateY(100%);
-}
-
 section.in-view.maksut {
   transform: translateX(0);
 }
@@ -152,10 +152,6 @@ section.in-view.hinnasto {
 
 section.in-view.yhteystiedot {
   transform: translateX(0);
-}
-
-section.in-view.kartta {
-  transform: translateY(0);
 }
 
 section .palvelu {
