@@ -70,12 +70,27 @@ main {
   padding: 3rem 2rem;
 }
 
-/* Footer */
-footer {
+/* Neljä laatikkoa, jotka ovat kahdessa rivissä */
+.laetikkosarja {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+  margin: 3rem 0;
+}
+
+.laetikko {
+  background-color: #e9f5e9;
+  width: 48%; /* Palkin leveys */
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   text-align: center;
-  background-color: #d8f3dc;
-  padding: 1rem;
-  color: #081c15;
+}
+
+.laetikko:hover {
+  transform: scale(1.05); /* Palkki suurenee hoverilla */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Voimakkaampi varjo hover-tilassa */
 }
 
 /* Responsiivisuus */
@@ -89,14 +104,6 @@ footer {
   }
   section {
     padding: 1.5rem;
-  }
-}
-
-/* Suuremmat näytöt */
-@media only screen and (min-width: 768px) {
-  .hero-content h1 {
-    font-size: 5rem;
-    max-width: 90%;
   }
 }
 
@@ -117,4 +124,11 @@ footer {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+footer {
+  text-align: center;
+  background-color: #d8f3dc;
+  padding: 1rem;
+  color: #081c15;
 }
