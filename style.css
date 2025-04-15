@@ -123,6 +123,9 @@ section {
 
 .hinnasto {
   width: 40%; /* Kapeampi kuin ennen */
+  opacity: 0; /* Piilotetaan alkuun */
+  transform: translateX(100%); /* Alkuperäinen sijainti oikealla */
+  transition: transform 1s ease-out, opacity 1s ease-out; /* Liukuminen ja näkyvyys */
 }
 
 .palvelu {
@@ -142,9 +145,6 @@ section {
 
 .yhteystiedot {
   width: 40%; /* Kapeampi kuin ennen */
-  opacity: 0;
-  transform: translateX(-100%); /* Aluksi vasemmalla */
-  transition: transform 1s ease-out, opacity 1s ease-out; /* Liukuminen ja näkyvyys */
 }
 
 .maksut {

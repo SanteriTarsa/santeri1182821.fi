@@ -22,3 +22,15 @@ window.addEventListener('scroll', function () {
     yhteystiedotSection.style.opacity = '1';  // Teksti tulee näkyviin
   }
 });
+// Kuunnellaan scroll-tapahtumaa ja tarkistetaan, näkyykö Hinnasto-laatikko
+window.addEventListener('scroll', function () {
+  const hinnastoSection = document.querySelector('.hinnasto');
+  const sectionTop = hinnastoSection.getBoundingClientRect().top;
+  const sectionVisible = window.innerHeight - sectionTop;
+
+  // Jos laatikko tulee näkyviin, liu'utetaan se paikalleen
+  if (sectionVisible > 150) {
+    hinnastoSection.style.transform = 'translateX(0)';  // Liukuu paikoilleen
+    hinnastoSection.style.opacity = '1';  // Teksti tulee näkyviin
+  }
+});
