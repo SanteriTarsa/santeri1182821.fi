@@ -70,15 +70,6 @@ main {
   padding: 3rem 2rem;
 }
 
-/* Rivi, joka jakaa maksut ja hinnaston */
-.row {
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
-  margin-bottom: 3rem;
-}
-
-/* Palkit */
 section {
   max-width: 800px;
   margin: 0 auto 3rem auto;
@@ -86,24 +77,14 @@ section {
   padding: 2rem;
   border-radius: 10px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  opacity: 0; /* Aluksi piilotamme ne */
-  transform: translateX(-50%); /* Alkuperäinen sijainti vasemmalla */
+  opacity: 0;
+  transform: translateX(-50%);
   transition: all 0.5s ease;
-  filter: blur(4px);
-  transition: all 0.8s ease, filter 0.8s ease;
 }
 
-/* Kun infopalkki tulee näkyviin */
 section.in-view {
   opacity: 1;
   transform: translateX(0);
-  filter: blur(0);
-  transition: all 0.8s ease, filter 1s ease;
-}
-
-section:hover {
-  transform: scale(1.05); /* Palkki suurenee hoverilla */
-  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* Footer */
@@ -117,31 +98,82 @@ footer {
 /* Responsiivisuus */
 @media only screen and (max-width: 768px) {
   .hero-content h1 {
-    font-size: 2.5rem; /* Pienempi fontti pienemmille näytöille */
+    font-size: 2.5rem;
   }
   .cta-button {
-    font-size: 1.2rem; /* Nappi pienenee puhelimella */
-    padding: 0.8rem 1rem; /* Vähän pienempi koko */
+    font-size: 1.2rem;
+    padding: 0.8rem 1rem;
   }
   section {
-    padding: 1.5rem; /* Pienempi padding mobiilissa */
-  }
-
-  .row {
-    flex-direction: column;
+    padding: 1.5rem;
   }
 }
 
-/* Suuremmat näytöt kuten tabletit ja pöytäkoneet */
+/* Suuremmat näytöt */
 @media only screen and (min-width: 768px) {
   .hero-content h1 {
     font-size: 5rem;
     max-width: 90%;
   }
+}
 
-  .row {
-    flex-direction: row;
-    justify-content: space-between;
-  }
+/* Liikkuvat laatikot */
+.row {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+section.maksut,
+section.hinnasto,
+section.yhteystiedot,
+section.kartta {
+  transition: transform 0.7s ease-out;
+}
+
+section.maksut {
+  transform: translateX(-100%);
+}
+
+section.hinnasto {
+  transform: translateX(100%);
+}
+
+section.yhteystiedot {
+  transform: translateX(-100%);
+}
+
+section.kartta {
+  transform: translateY(100%);
+}
+
+/* Kun laatikot tulevat näkyviin */
+section.in-view.maksut {
+  transform: translateX(0);
+}
+
+section.in-view.hinnasto {
+  transform: translateX(0);
+}
+
+section.in-view.yhteystiedot {
+  transform: translateX(0);
+}
+
+section.in-view.kartta {
+  transform: translateY(0);
+}
+
+section .palvelu {
+  width: 48%;
+  background-color: #e9f5e9;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+section .palvelu:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
 }
 
