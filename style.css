@@ -128,11 +128,11 @@ section {
   transition: transform 1s ease-out, opacity 1s ease-out; /* Liukuminen ja näkyvyys */
 }
 
-.palvelu {
-  background-color: #e9f5e9;
-  padding: 1.5rem;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+.maksut {
+  width: 40%; /* Kapeampi kuin ennen */
+  opacity: 0; /* Piilotetaan alkuun */
+  transform: translateX(100%); /* Alkuperäinen sijainti oikealla */
+  transition: transform 1s ease-out, opacity 1s ease-out; /* Liukuminen ja näkyvyys */
 }
 
 /* Yhteystiedot ja maksuvälineet vierekkäin */

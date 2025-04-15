@@ -34,3 +34,15 @@ window.addEventListener('scroll', function () {
     hinnastoSection.style.opacity = '1';  // Teksti tulee näkyviin
   }
 });
+// Kuunnellaan scroll-tapahtumaa ja tarkistetaan, näkyykö Maksuvälineet-laatikko
+window.addEventListener('scroll', function () {
+  const maksutSection = document.querySelector('.maksut');
+  const sectionTop = maksutSection.getBoundingClientRect().top;
+  const sectionVisible = window.innerHeight - sectionTop;
+
+  // Jos laatikko tulee näkyviin, liu'utetaan se paikalleen
+  if (sectionVisible > 150) {
+    maksutSection.style.transform = 'translateX(0)';  // Liukuu paikoilleen
+    maksutSection.style.opacity = '1';  // Teksti tulee näkyviin
+  }
+});
