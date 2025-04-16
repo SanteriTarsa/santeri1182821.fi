@@ -22,9 +22,6 @@ body {
   justify-content: center;
   align-items: center;
   position: relative;
-  z-index: 1;
-  animation: none;  /* Poistaa animaation */
-  transform: none;  /* Estää liikkumisen */
 }
 
 .hero::before {
@@ -75,10 +72,10 @@ main {
 
 /* Tervetuloa laatikon liukuminen vasemmalta ja motion blur */
 .intro {
-  width: 48%; /* Kapeampi kuin ennen */
+  width: 48%;
   opacity: 0; /* Aluksi piilotettu */
   transform: translateX(-100%); /* Alkuperäinen sijainti vasemmalla */
-  animation: slideInLeft 1s ease-out forwards; /* Liukuminen vasemmalta */
+  animation: slideInLeft 4s ease-out forwards; /* Liukuminen vasemmalta (neljä kertaa hitaampi) */
 }
 
 /* Hinnasto laatikko */
@@ -86,7 +83,7 @@ main {
   width: 48%;
   opacity: 0; /* Aluksi piilotettu */
   transform: translateX(100%); /* Alkuperäinen sijainti oikealla */
-  animation: slideInRight 1s ease-out forwards; /* Liukuminen oikealta */
+  animation: slideInRight 4s ease-out forwards; /* Liukuminen oikealta (neljä kertaa hitaampi) */
 }
 
 /* Maksuvälineet laatikko */
@@ -94,7 +91,7 @@ main {
   width: 48%;
   opacity: 0; /* Aluksi piilotettu */
   transform: translateX(100%); /* Alkuperäinen sijainti oikealla */
-  animation: slideInRight 1s ease-out forwards; /* Liukuminen oikealta */
+  animation: slideInRight 4s ease-out forwards; /* Liukuminen oikealta (neljä kertaa hitaampi) */
 }
 
 /* Yhteystiedot laatikko */
@@ -102,14 +99,14 @@ main {
   width: 48%;
   opacity: 0; /* Aluksi piilotettu */
   transform: translateX(-100%); /* Alkuperäinen sijainti vasemmalla */
-  animation: slideInLeft 1s ease-out forwards; /* Liukuminen vasemmalta */
+  animation: slideInLeft 4s ease-out forwards; /* Liukuminen vasemmalta (neljä kertaa hitaampi) */
 }
 
 /* Sijainti laatikko pysyy paikoillaan */
 .kartta {
   opacity: 0; /* Aluksi piilotettu */
   transform: translateY(20px); /* Liike alhaalta ylös */
-  animation: fadeInUp 1s ease-out forwards;
+  animation: fadeInUp 4s ease-out forwards; /* Neljä kertaa hitaampi animaatio */
 }
 
 @keyframes fadeInUp {
@@ -140,7 +137,7 @@ section:hover {
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Lisää varjoa */
 }
 
-/* Liukuminen animaatio vasemmalta */
+/* Liukuminen vasemmalta */
 @keyframes slideInLeft {
   0% {
     transform: translateX(-100%); /* Alkuperäinen sijainti vasemmalla */
@@ -152,7 +149,7 @@ section:hover {
   }
 }
 
-/* Liukuminen animaatio oikealta */
+/* Liukuminen oikealta */
 @keyframes slideInRight {
   0% {
     transform: translateX(100%); /* Alkuperäinen sijainti oikealla */
