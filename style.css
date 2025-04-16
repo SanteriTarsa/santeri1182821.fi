@@ -58,7 +58,7 @@ body {
   text-decoration: none;
   font-weight: bold;
   box-shadow: 0 0 10px #39FF14;
-  transition: transform 0.3s ease;
+  transition: transform 0.6s ease;
 }
 
 .cta-button:hover {
@@ -128,7 +128,7 @@ section {
   padding: 2rem;
   border-radius: 10px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.5s ease-out, box-shadow 0.5s ease-out, transform 0.3s ease-out; /* Pehmeä kohotus */
+  transition: transform 1s ease-out, box-shadow 0.5s ease-out, transform 0.3s ease-out; /* Pehmeä kohotus */
 }
 
 /* Kohotus ja laajeneminen, kun hiiri menee laatikon päälle */
@@ -250,7 +250,7 @@ body {
   text-decoration: none;
   font-weight: bold;
   box-shadow: 0 0 10px #39FF14;
-  transition: transform 0.3s ease;
+  transition: transform 0.7s ease;
 }
 
 .cta-button:hover {
@@ -277,7 +277,7 @@ main {
 .yhteystiedot {
   width: 48%;  /* Määritetään laatikoiden leveys */
   opacity: 0; /* Piilotetaan aluksi */
-  transition: transform 1s ease-out, opacity 1s ease-out; /* Liukuminen ja näkyvyys */
+  transition: transform 3s ease-out, opacity 1s ease-out; /* Liukuminen ja näkyvyys */
 }
 
 .intro {
@@ -347,7 +347,7 @@ section {
   padding: 2rem;
   border-radius: 10px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.5s ease-out, box-shadow 0.5s ease-out; /* Pehmeä kohotus */
+  transition: transform 0.8s ease-out, box-shadow 0.5s ease-out; /* Pehmeä kohotus */
 }
 
 /* Kohotus ja laajeneminen, kun hiiri menee laatikon päälle */
