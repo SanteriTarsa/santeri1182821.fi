@@ -1,60 +1,68 @@
-/* Smooth scroll */
-html {
-  scroll-behavior: smooth;
-}
-
 /* Yleinen ulkoasu */
 body {
   font-family: Arial, sans-serif;
-  background-image: url('kuvat/logo.webp');
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+  background-color: #f0fdf4;
   color: #1b4332;
   margin: 0;
   padding: 0;
 }
 
-/* Hero */
+/* HERO-OSIO – vain logo taustana */
 .hero {
-  background: none;
-  height: auto;
-  padding: 4rem 2rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  background-image: url('kuvat/logo.webp');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 70vh;
 }
 
-.hero-content {
-  color: white;
-  background-color: rgba(0, 0, 0, 0.5);
+/* Kuka on Hanna -osio, taustakuva */
+.intro {
+  background-image: url('kuvat/tausta.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #1b4332;
+  opacity: 0;
+  transform: translateX(-100%);
+}
+
+/* Sisältöasettelu */
+.intro-content {
+  display: flex;
+  flex-direction: column;
   padding: 2rem;
+  background-color: rgba(255,255,255,0.85);
   border-radius: 10px;
 }
 
-.hero-content h1 {
-  font-size: 4rem;
-  margin-bottom: 2rem;
-  text-shadow: 0 0 10px black;
+/* Muut osiot ja scroll-animaatiot */
+.hinnasto, .yhteystiedot, .maksut {
+  opacity: 0;
+  transition: all 1.2s ease;
 }
 
-.cta-button {
-  background-color: #39FF14;
-  color: black;
-  padding: 1rem 2rem;
-  border-radius: 50px;
-  text-decoration: none;
-  font-weight: bold;
-  box-shadow: 0 0 10px #39FF14;
-  transition: transform 0.6s ease;
+.hinnasto {
+  transform: translateX(100%);
 }
 
-.cta-button:hover {
-  transform: scale(1.1);
+.yhteystiedot {
+  transform: translateX(-100%);
 }
 
-/* Main sisältö */
+.maksut {
+  transform: translateX(100%);
+}
+
+.intro.in-view,
+.hinnasto.in-view,
+.yhteystiedot.in-view,
+.maksut.in-view {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+/* Yleinen layout */
 main {
   padding: 3rem 2rem;
 }
@@ -67,34 +75,6 @@ main {
   margin-bottom: 3rem;
 }
 
-/* Intro */
-.intro {
-  width: 100%;
-}
-
-.intro-content {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-}
-
-.intro-text {
-  flex: 1;
-}
-
-.intro-image {
-  flex: 1;
-  text-align: right;
-}
-
-.intro-image img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-}
-
-/* Muut osiot */
 .hinnasto, .yhteystiedot, .maksut, .kartta {
   width: 48%;
 }
@@ -118,43 +98,8 @@ section:hover {
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Scroll-animaatiot */
-.intro, .hinnasto, .yhteystiedot, .maksut {
-  opacity: 0;
-  transition: all 1.2s ease;
-}
-
-.intro, .yhteystiedot {
-  transform: translateX(-100%);
-}
-
-.hinnasto, .maksut {
-  transform: translateX(100%);
-}
-
-.intro.in-view,
-.hinnasto.in-view,
-.yhteystiedot.in-view,
-.maksut.in-view {
-  transform: translateX(0);
-  opacity: 1;
-}
-
 /* Responsiivisuus */
 @media only screen and (max-width: 768px) {
-  .hero-content h1 {
-    font-size: 2.5rem;
-  }
-
-  .cta-button {
-    font-size: 1.2rem;
-    padding: 0.8rem 1rem;
-  }
-
-  section {
-    padding: 1.5rem;
-  }
-
   .row {
     flex-direction: column;
   }
@@ -164,11 +109,11 @@ section:hover {
   }
 
   .intro-content {
-    flex-direction: column;
+    padding: 1.5rem;
   }
 
-  .intro-image {
-    text-align: center;
+  .hero {
+    height: 50vh;
   }
 }
 
