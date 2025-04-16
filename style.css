@@ -6,7 +6,7 @@ html {
 /* Yleinen ulkoasu */
 body {
   font-family: Arial, sans-serif;
-  background-image: url('kuvat/pohja.png');
+  background-image: url('kuvat/logo.webp');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -54,7 +54,7 @@ body {
   transform: scale(1.1);
 }
 
-/* Main */
+/* Main sisältö */
 main {
   padding: 3rem 2rem;
 }
@@ -118,6 +118,28 @@ section:hover {
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
+/* Scroll-animaatiot */
+.intro, .hinnasto, .yhteystiedot, .maksut {
+  opacity: 0;
+  transition: all 1.2s ease;
+}
+
+.intro, .yhteystiedot {
+  transform: translateX(-100%);
+}
+
+.hinnasto, .maksut {
+  transform: translateX(100%);
+}
+
+.intro.in-view,
+.hinnasto.in-view,
+.yhteystiedot.in-view,
+.maksut.in-view {
+  transform: translateX(0);
+  opacity: 1;
+}
+
 /* Responsiivisuus */
 @media only screen and (max-width: 768px) {
   .hero-content h1 {
@@ -156,28 +178,4 @@ footer {
   background-color: #d8f3dc;
   padding: 1rem;
   color: #081c15;
-}
-/* Alkuasetukset ennen näkyvyyttä */
-.intro, .hinnasto, .yhteystiedot, .maksut {
-  opacity: 0;
-  transition: all 1.2s ease;
-}
-
-/* Slide vasemmalta */
-.intro, .yhteystiedot {
-  transform: translateX(-100%);
-}
-
-/* Slide oikealta */
-.hinnasto, .maksut {
-  transform: translateX(100%);
-}
-
-/* Kun laatikko näkyy ruudulla */
-.intro.in-view,
-.hinnasto.in-view,
-.yhteystiedot.in-view,
-.maksut.in-view {
-  transform: translateX(0);
-  opacity: 1;
 }
