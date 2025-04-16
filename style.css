@@ -84,7 +84,7 @@ main {
   width: 48%;
   opacity: 0; /* Aluksi piilotettu */
   transform: translateX(-100%); /* Alkuperäinen sijainti vasemmalla */
-  animation: slideInLeft 4s ease-out forwards; /* Liukuminen vasemmalta (neljä kertaa hitaampi) */
+  animation: slideInLeft 0.75s ease-out forwards; /* Liukuminen vasemmalta (25% nopeampi) */
 }
 
 /* Hinnasto laatikko */
@@ -92,7 +92,7 @@ main {
   width: 48%;
   opacity: 0; /* Aluksi piilotettu */
   transform: translateX(100%); /* Alkuperäinen sijainti oikealla */
-  animation: slideInRight 4s ease-out forwards; /* Liukuminen oikealta (neljä kertaa hitaampi) */
+  animation: slideInRight 0.75s ease-out forwards; /* Liukuminen oikealta (25% nopeampi) */
 }
 
 /* Maksuvälineet laatikko */
@@ -100,7 +100,7 @@ main {
   width: 48%;
   opacity: 0; /* Aluksi piilotettu */
   transform: translateX(100%); /* Alkuperäinen sijainti oikealla */
-  animation: slideInRight 4s ease-out forwards; /* Liukuminen oikealta (neljä kertaa hitaampi) */
+  animation: slideInRight 0.75s ease-out forwards; /* Liukuminen oikealta (25% nopeampi) */
 }
 
 /* Yhteystiedot laatikko */
@@ -108,25 +108,14 @@ main {
   width: 48%;
   opacity: 0; /* Aluksi piilotettu */
   transform: translateX(-100%); /* Alkuperäinen sijainti vasemmalla */
-  animation: slideInLeft 4s ease-out forwards; /* Liukuminen vasemmalta (neljä kertaa hitaampi) */
+  animation: slideInLeft 0.75s ease-out forwards; /* Liukuminen vasemmalta (25% nopeampi) */
 }
 
-/* Sijainti laatikko pysyy paikoillaan */
+/* Sijainti laatikko pysyy paikoillaan, ei liiku */
 .kartta {
-  opacity: 0; /* Aluksi piilotettu */
-  transform: translateY(20px); /* Liike alhaalta ylös */
-  animation: fadeInUp 4s ease-out forwards; /* Neljä kertaa hitaampi animaatio */
-}
-
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  opacity: 1; /* Sijainti laatikko näkyy heti eikä liiku */
+  transform: translateY(0); /* Ei liiku alhaalta ylös */
+  animation: none; /* Ei liikkumista */
 }
 
 /* Liukuminen vasemmalta */
