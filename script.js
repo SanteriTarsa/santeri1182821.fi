@@ -30,3 +30,17 @@ window.addEventListener('scroll', function () {
     yhteystiedotSection.style.opacity = '1';  // Teksti tulee näkyviin
   }
 });
+// Kuunnellaan scroll-tapahtumaa ja tarkistetaan, näkyykö Tervetuloa-laatikko
+window.addEventListener('scroll', function () {
+  const sections = document.querySelectorAll('section'); // Etsitään kaikki laatikot
+  sections.forEach(section => {
+    const sectionTop = section.getBoundingClientRect().top; // Selvitetään laatikon sijainti
+    const sectionVisible = window.innerHeight - sectionTop; // Lasketaan kuinka paljon laatikko on näkyvissä
+
+    if (sectionVisible > 150) { // Jos laatikko tulee näkyviin
+      section.classList.add('in-view'); // Lisää 'in-view' luokan, joka laukaisee liukumisen
+    } else {
+      section.classList.remove('in-view'); // Poistaa 'in-view' luokan, jos laatikko ei ole näkyvissä
+    }
+  });
+});
