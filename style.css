@@ -14,7 +14,7 @@ body {
 
 /* Hero (yläosa) */
 .hero {
-  background-image: url('kuvat/FYSIOHANNELI.png');
+  background-image: url('kuvat/tausta.png');
   background-size: cover;
   background-position: center;
   height: 100vh;
