@@ -70,7 +70,16 @@ main {
   padding: 3rem 2rem;
 }
 
-/* Tervetuloa laatikon liukuminen vasemmalta ja motion blur */
+/* Laatikot vierekkäin ja liukuminen */
+.row {
+  display: flex;
+  flex-wrap: wrap;  /* Varmistaa, että laatikot voivat siirtyä seuraavalle riville pienemmillä näytöillä */
+  gap: 20px;  /* Väli laatikoiden välillä */
+  justify-content: space-between;
+  margin-bottom: 3rem;
+}
+
+/* Tervetuloa laatikko */
 .intro {
   width: 48%;
   opacity: 0; /* Aluksi piilotettu */
@@ -120,23 +129,6 @@ main {
   }
 }
 
-/* Yleinen boksi tyyli */
-section {
-  max-width: 800px;
-  margin: 0 auto 3rem auto;
-  background-color: #e9f5e9;
-  padding: 2rem;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.5s ease-out, box-shadow 0.5s ease-out, transform 0.3s ease-out; /* Pehmeä kohotus */
-}
-
-/* Kohotus ja laajeneminen, kun hiiri menee laatikon päälle */
-section:hover {
-  transform: translateY(-10px) scale(1.05); /* Nousee ja laajenee vähän */
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Lisää varjoa */
-}
-
 /* Liukuminen vasemmalta */
 @keyframes slideInLeft {
   0% {
@@ -169,7 +161,7 @@ section {
   padding: 2rem;
   border-radius: 10px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.8s ease-out, box-shadow 0.5s ease-out; /* Pehmeä kohotus */
+  transition: transform 0.5s ease-out, box-shadow 0.5s ease-out, transform 0.3s ease-out; /* Pehmeä kohotus */
 }
 
 /* Kohotus ja laajeneminen, kun hiiri menee laatikon päälle */
