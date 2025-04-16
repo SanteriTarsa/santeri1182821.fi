@@ -84,7 +84,7 @@ main {
   width: 48%;
   opacity: 0; /* Aluksi piilotettu */
   transform: translateX(-100%); /* Alkuperäinen sijainti vasemmalla */
-  animation: slideInLeft 0.75s ease-out forwards; /* Liukuminen vasemmalta (25% nopeampi) */
+  animation: slideInLeft 2s ease-out forwards; /* Liukuminen vasemmalta (2 sekuntia) */
 }
 
 /* Hinnasto laatikko */
@@ -92,7 +92,7 @@ main {
   width: 48%;
   opacity: 0; /* Aluksi piilotettu */
   transform: translateX(100%); /* Alkuperäinen sijainti oikealla */
-  animation: slideInRight 0.75s ease-out forwards; /* Liukuminen oikealta (25% nopeampi) */
+  animation: slideInRight 2s ease-out forwards; /* Liukuminen oikealta (2 sekuntia) */
 }
 
 /* Maksuvälineet laatikko */
@@ -100,7 +100,7 @@ main {
   width: 48%;
   opacity: 0; /* Aluksi piilotettu */
   transform: translateX(100%); /* Alkuperäinen sijainti oikealla */
-  animation: slideInRight 0.75s ease-out forwards; /* Liukuminen oikealta (25% nopeampi) */
+  animation: slideInRight 2s ease-out forwards; /* Liukuminen oikealta (2 sekuntia) */
 }
 
 /* Yhteystiedot laatikko */
@@ -108,7 +108,7 @@ main {
   width: 48%;
   opacity: 0; /* Aluksi piilotettu */
   transform: translateX(-100%); /* Alkuperäinen sijainti vasemmalla */
-  animation: slideInLeft 0.75s ease-out forwards; /* Liukuminen vasemmalta (25% nopeampi) */
+  animation: slideInLeft 2s ease-out forwards; /* Liukuminen vasemmalta (2 sekuntia) */
 }
 
 /* Sijainti laatikko pysyy paikoillaan, ei liiku */
