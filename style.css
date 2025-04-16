@@ -550,3 +550,19 @@ footer {
   animation: none !important;
   transform: none !important;
 }
+/* Ylin laatikko (esim. taustakuva) on aina näkyvissä eikä liiku */
+.hero {
+  display: block !important; /* Varmistetaan, että elementti on näkyvissä */
+  position: relative;
+  z-index: 1; /* Varmistetaan, että se on muiden elementtien päällä */
+  animation: none !important;  /* Poistaa kaikki animaatiot */
+  transform: none !important;  /* Estää liikkumisen */
+}
+
+/* Hero-alueen sisällön asetukset */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: white;
+}
