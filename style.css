@@ -16,24 +16,44 @@ body {
   height: 70vh;
 }
 
-/* Kuka on Hanna -osio, taustakuva */
+/* Kuka on Hanna -osio */
 .intro {
-  background-image: url('kuvat/tausta.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   color: #1b4332;
   opacity: 0;
   transform: translateX(-100%);
+  transition: all 1.2s ease;
 }
 
-/* Sisältöasettelu */
+/* Kun näkyvissä */
+.intro.in-view {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+/* Tekstin ja kuvan asettelu */
 .intro-content {
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
   padding: 2rem;
   background-color: rgba(255,255,255,0.85);
   border-radius: 10px;
+}
+
+.intro-text {
+  flex: 1;
+}
+
+.intro-image {
+  flex: 1;
+  text-align: right;
+}
+
+.intro-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 /* Muut osiot ja scroll-animaatiot */
@@ -54,7 +74,6 @@ body {
   transform: translateX(100%);
 }
 
-.intro.in-view,
 .hinnasto.in-view,
 .yhteystiedot.in-view,
 .maksut.in-view {
@@ -109,7 +128,13 @@ section:hover {
   }
 
   .intro-content {
+    flex-direction: column;
     padding: 1.5rem;
+  }
+
+  .intro-image {
+    text-align: center;
+    margin-top: 1rem;
   }
 
   .hero {
