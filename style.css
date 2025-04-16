@@ -6,7 +6,10 @@ html {
 /* Yleinen ulkoasu */
 body {
   font-family: Arial, sans-serif;
-  background-color: #f0fdf4;
+  background-image: url('kuvat/pohja.png'); /* Taustakuva koko sivulle */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Tausta pysyy paikallaan */
   color: #1b4332;
   margin: 0;
   padding: 0;
@@ -73,8 +76,8 @@ main {
 /* Laatikot vierekkäin ja liukuminen */
 .row {
   display: flex;
-  flex-wrap: wrap;  /* Varmistaa, että laatikot voivat siirtyä seuraavalle riville pienemmillä näytöillä */
-  gap: 20px;  /* Väli laatikoiden välillä */
+  flex-wrap: wrap;
+  gap: 20px;
   justify-content: space-between;
   margin-bottom: 3rem;
 }
@@ -82,50 +85,50 @@ main {
 /* Tervetuloa laatikko */
 .intro {
   width: 48%;
-  opacity: 0; /* Aluksi piilotettu */
-  transform: translateX(-100%); /* Alkuperäinen sijainti vasemmalla */
-  animation: slideInLeft 2s ease-out forwards; /* Liukuminen vasemmalta (2 sekuntia) */
+  opacity: 0;
+  transform: translateX(-100%);
+  animation: slideInLeft 2s ease-out forwards;
 }
 
 /* Hinnasto laatikko */
 .hinnasto {
   width: 48%;
-  opacity: 0; /* Aluksi piilotettu */
-  transform: translateX(100%); /* Alkuperäinen sijainti oikealla */
-  animation: slideInRight 2s ease-out forwards; /* Liukuminen oikealta (2 sekuntia) */
+  opacity: 0;
+  transform: translateX(100%);
+  animation: slideInRight 2s ease-out forwards;
 }
 
 /* Maksuvälineet laatikko */
 .maksut {
   width: 48%;
-  opacity: 0; /* Aluksi piilotettu */
-  transform: translateX(100%); /* Alkuperäinen sijainti oikealla */
-  animation: slideInRight 2s ease-out forwards; /* Liukuminen oikealta (2 sekuntia) */
+  opacity: 0;
+  transform: translateX(100%);
+  animation: slideInRight 2s ease-out forwards;
 }
 
 /* Yhteystiedot laatikko */
 .yhteystiedot {
   width: 48%;
-  opacity: 0; /* Aluksi piilotettu */
-  transform: translateX(-100%); /* Alkuperäinen sijainti vasemmalla */
-  animation: slideInLeft 2s ease-out forwards; /* Liukuminen vasemmalta (2 sekuntia) */
+  opacity: 0;
+  transform: translateX(-100%);
+  animation: slideInLeft 2s ease-out forwards;
 }
 
-/* Sijainti laatikko pysyy paikoillaan, ei liiku */
+/* Sijainti laatikko pysyy paikoillaan */
 .kartta {
-  opacity: 1; /* Sijainti laatikko näkyy heti eikä liiku */
-  transform: translateY(0); /* Ei liiku alhaalta ylös */
-  animation: none; /* Ei liikkumista */
+  opacity: 1;
+  transform: translateY(0);
+  animation: none;
 }
 
 /* Liukuminen vasemmalta */
 @keyframes slideInLeft {
   0% {
-    transform: translateX(-100%); /* Alkuperäinen sijainti vasemmalla */
+    transform: translateX(-100%);
     opacity: 0;
   }
   100% {
-    transform: translateX(0); /* Pysähtyy paikoilleen */
+    transform: translateX(0);
     opacity: 1;
   }
 }
@@ -133,11 +136,11 @@ main {
 /* Liukuminen oikealta */
 @keyframes slideInRight {
   0% {
-    transform: translateX(100%); /* Alkuperäinen sijainti oikealla */
+    transform: translateX(100%);
     opacity: 0;
   }
   100% {
-    transform: translateX(0); /* Pysähtyy paikoilleen */
+    transform: translateX(0);
     opacity: 1;
   }
 }
@@ -146,17 +149,17 @@ main {
 section {
   max-width: 800px;
   margin: 0 auto 3rem auto;
-  background-color: #e9f5e9;
+  background-color: rgba(255, 255, 255, 0.85); /* läpikuultava valkoinen tausta */
   padding: 2rem;
   border-radius: 10px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.5s ease-out, box-shadow 0.5s ease-out, transform 0.3s ease-out; /* Pehmeä kohotus */
+  transition: transform 0.5s ease-out, box-shadow 0.5s ease-out, transform 0.3s ease-out;
 }
 
-/* Kohotus ja laajeneminen, kun hiiri menee laatikon päälle */
+/* Hover-efekti laatikoille */
 section:hover {
-  transform: translateY(-10px) scale(1.05); /* Nousee ja laajenee vähän */
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Lisää varjoa */
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
 /* Responsiivisuus */
@@ -164,10 +167,12 @@ section:hover {
   .hero-content h1 {
     font-size: 2.5rem;
   }
+
   .cta-button {
     font-size: 1.2rem;
     padding: 0.8rem 1rem;
   }
+
   section {
     padding: 1.5rem;
   }
@@ -177,7 +182,7 @@ section:hover {
   }
 
   .intro, .hinnasto, .yhteystiedot, .maksut {
-    width: 100%; /* Mobiilissa ne vievät koko leveys */
+    width: 100%;
   }
 }
 
