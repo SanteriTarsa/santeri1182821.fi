@@ -163,3 +163,16 @@ footer {
   padding: 1rem;
   color: #081c15;
 }
+.hero {
+  background: none;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  box-shadow: none;
+  background-color: transparent;
+  max-width: 100%;
+  border-radius: 0;
+}
