@@ -529,3 +529,24 @@ footer {
   z-index: 1;
   animation: none;  /* Poistaa animaation */
 }
+/* Ylin laatikko (esim. taustakuva) ei liiku */
+.hero {
+  position: relative;
+  z-index: 1;
+  animation: none !important;  /* Estetään animaatiot */
+  transform: none !important;  /* Estetään liikkuminen */
+}
+
+/* Tervetuloa laatikon liukuminen vasemmalta */
+.intro {
+  width: 48%;
+  opacity: 0; /* Aluksi piilotettu */
+  transform: translateX(-100%); /* Alkuperäinen sijainti vasemmalla */
+  transition: transform 1s ease-out, opacity 1s ease-out;
+}
+
+/* Poistetaan animaatio hero-alueelta */
+.hero-content {
+  animation: none !important;
+  transform: none !important;
+}
