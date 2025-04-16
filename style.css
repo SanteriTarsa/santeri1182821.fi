@@ -6,51 +6,37 @@ html {
 /* Yleinen ulkoasu */
 body {
   font-family: Arial, sans-serif;
-  background-image: url('kuvat/pohja.png'); /* Taustakuva koko sivulle */
+  background-image: url('kuvat/pohja.png');
   background-size: cover;
   background-position: center;
-  background-attachment: fixed; /* Tausta pysyy paikallaan */
+  background-attachment: fixed;
   color: #1b4332;
   margin: 0;
   padding: 0;
 }
 
-/* Hero (yläosa) */
+/* Hero */
 .hero {
-  background-image: url('kuvat/tausta.png');
-  background-size: cover;
-  background-position: center;
-  height: 100vh;
+  background: none;
+  height: auto;
+  padding: 4rem 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
-}
-
-.hero::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0,0,0,0.4);
-  z-index: 1;
+  text-align: center;
 }
 
 .hero-content {
-  position: relative;
-  z-index: 2;
-  text-align: center;
   color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 2rem;
+  border-radius: 10px;
 }
 
 .hero-content h1 {
   font-size: 4rem;
   margin-bottom: 2rem;
   text-shadow: 0 0 10px black;
-  max-width: 100%;
-  width: 100%;
-  text-align: center;
 }
 
 .cta-button {
@@ -68,12 +54,11 @@ body {
   transform: scale(1.1);
 }
 
-/* Main sisältö */
+/* Main */
 main {
   padding: 3rem 2rem;
 }
 
-/* Laatikot vierekkäin ja liukuminen */
 .row {
   display: flex;
   flex-wrap: wrap;
@@ -82,81 +67,52 @@ main {
   margin-bottom: 3rem;
 }
 
-/* Tervetuloa laatikko */
+/* Intro */
 .intro {
-  width: 48%;
-  opacity: 0;
-  transform: translateX(-100%);
-  animation: slideInLeft 2s ease-out forwards;
+  width: 100%;
 }
 
-/* Hinnasto laatikko */
-.hinnasto {
-  width: 48%;
-  opacity: 0;
-  transform: translateX(100%);
-  animation: slideInRight 2s ease-out forwards;
+.intro-content {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
 }
 
-/* Maksuvälineet laatikko */
-.maksut {
-  width: 48%;
-  opacity: 0;
-  transform: translateX(100%);
-  animation: slideInRight 2s ease-out forwards;
+.intro-text {
+  flex: 1;
 }
 
-/* Yhteystiedot laatikko */
-.yhteystiedot {
-  width: 48%;
-  opacity: 0;
-  transform: translateX(-100%);
-  animation: slideInLeft 2s ease-out forwards;
+.intro-image {
+  flex: 1;
+  text-align: right;
 }
 
-/* Sijainti laatikko pysyy paikoillaan */
+.intro-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Muut osiot */
+.hinnasto, .yhteystiedot, .maksut, .kartta {
+  width: 48%;
+}
+
 .kartta {
-  opacity: 1;
-  transform: translateY(0);
-  animation: none;
+  width: 100%;
 }
 
-/* Liukuminen vasemmalta */
-@keyframes slideInLeft {
-  0% {
-    transform: translateX(-100%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-/* Liukuminen oikealta */
-@keyframes slideInRight {
-  0% {
-    transform: translateX(100%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-/* Yleinen boksi tyyli */
 section {
   max-width: 800px;
   margin: 0 auto 3rem auto;
-  background-color: rgba(255, 255, 255, 0.85); /* läpikuultava valkoinen tausta */
+  background-color: rgba(255, 255, 255, 0.85);
   padding: 2rem;
   border-radius: 10px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.5s ease-out, box-shadow 0.5s ease-out, transform 0.3s ease-out;
+  transition: transform 0.5s ease-out, box-shadow 0.5s ease-out;
 }
 
-/* Hover-efekti laatikoille */
 section:hover {
   transform: translateY(-10px) scale(1.05);
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
@@ -181,8 +137,16 @@ section:hover {
     flex-direction: column;
   }
 
-  .intro, .hinnasto, .yhteystiedot, .maksut {
+  .hinnasto, .yhteystiedot, .maksut {
     width: 100%;
+  }
+
+  .intro-content {
+    flex-direction: column;
+  }
+
+  .intro-image {
+    text-align: center;
   }
 }
 
