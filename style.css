@@ -523,3 +523,9 @@ footer {
   padding: 1rem;
   color: #081c15;
 }
+/* Ylin laatikko (esim. taustakuva) ei liiku */
+.hero {
+  position: relative;
+  z-index: 1;
+  animation: none;  /* Poistaa animaation */
+}

@@ -13,7 +13,7 @@ window.addEventListener('scroll', function () {
     const sectionTop = section.el.getBoundingClientRect().top; // Selvitetään laatikon sijainti
     const sectionVisible = window.innerHeight - sectionTop; // Lasketaan kuinka paljon laatikko on näkyvissä
 
-    if (sectionVisible > 150) {  // 150px ennen kuin laatikko tulee näkyviin
+    if (sectionVisible > 50) {  // 50px ennen kuin laatikko tulee näkyviin
       section.el.style.transform = section.animation;  // Liukuu paikoilleen
       section.el.style.opacity = section.opacity;  // Teksti tulee näkyviin
     }
@@ -25,7 +25,7 @@ window.addEventListener('scroll', function () {
   const sectionVisible = window.innerHeight - sectionTop;
 
   // Jos laatikko tulee näkyviin, liu'utetaan se paikalleen
-  if (sectionVisible > 150) {
+  if (sectionVisible > 50) {
     yhteystiedotSection.style.transform = 'translateX(0)';  // Liukuu paikoilleen
     yhteystiedotSection.style.opacity = '1';  // Teksti tulee näkyviin
   }
@@ -37,7 +37,7 @@ window.addEventListener('scroll', function () {
     const sectionTop = section.getBoundingClientRect().top; // Selvitetään laatikon sijainti
     const sectionVisible = window.innerHeight - sectionTop; // Lasketaan kuinka paljon laatikko on näkyvissä
 
-    if (sectionVisible > 150) { // Jos laatikko tulee näkyviin
+    if (sectionVisible > 50) { // Jos laatikko tulee näkyviin
       section.classList.add('in-view'); // Lisää 'in-view' luokan, joka laukaisee liukumisen
     } else {
       section.classList.remove('in-view'); // Poistaa 'in-view' luokan, jos laatikko ei ole näkyvissä
