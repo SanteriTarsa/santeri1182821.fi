@@ -19,3 +19,14 @@ window.addEventListener('scroll', function () {
     }
   });
 });
+window.addEventListener('scroll', function () {
+  const yhteystiedotSection = document.querySelector('.yhteystiedot');
+  const sectionTop = yhteystiedotSection.getBoundingClientRect().top;
+  const sectionVisible = window.innerHeight - sectionTop;
+
+  // Jos laatikko tulee näkyviin, liu'utetaan se paikalleen
+  if (sectionVisible > 150) {
+    yhteystiedotSection.style.transform = 'translateX(0)';  // Liukuu paikoilleen
+    yhteystiedotSection.style.opacity = '1';  // Teksti tulee näkyviin
+  }
+});

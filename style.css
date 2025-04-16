@@ -198,3 +198,20 @@ footer {
   padding: 1rem;
   color: #081c15;
 }
+.yhteystiedot {
+  width: 48%; /* Kapeampi kuin ennen */
+  opacity: 0; /* Piilotetaan alkuun */
+  transform: translateX(-100%); /* Alkuperäinen sijainti vasemmalla */
+  transition: transform 1s ease-out, opacity 1s ease-out; /* Liukuminen ja näkyvyys */
+}
+
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-100%); /* Alkuperäinen sijainti vasemmalla */
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0); /* Pysähtyy paikoilleen */
+    opacity: 1;
+  }
+}
