@@ -157,3 +157,27 @@ footer {
   padding: 1rem;
   color: #081c15;
 }
+/* Alkuasetukset ennen näkyvyyttä */
+.intro, .hinnasto, .yhteystiedot, .maksut {
+  opacity: 0;
+  transition: all 1.2s ease;
+}
+
+/* Slide vasemmalta */
+.intro, .yhteystiedot {
+  transform: translateX(-100%);
+}
+
+/* Slide oikealta */
+.hinnasto, .maksut {
+  transform: translateX(100%);
+}
+
+/* Kun laatikko näkyy ruudulla */
+.intro.in-view,
+.hinnasto.in-view,
+.yhteystiedot.in-view,
+.maksut.in-view {
+  transform: translateX(0);
+  opacity: 1;
+}
